@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+   
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <form [formGroup]= "formGroup">
+
+    <ion-list lines="full" class="ion-no-margin">
+      <ion-list-header lines="full">
+        <ion-label>
+          Label Positions
+        </ion-label>
+      </ion-list-header>
+     
+        
+
+      <ion-item>
+        <ion-label position="floating" >E-mail</ion-label>
+        <ion-input type="text" formControlName="username"></ion-input>
+      </ion-item>
+    
+
+    <ion-item>
+      <ion-label position="floating">Senha</ion-label>
+      <ion-input type="password" formControlName="password"></ion-input>
+    </ion-item>
+ 
+  </ion-list>
+
+  <ion-button color="primary" expand="full" (click)="logar()" [disabled]= "formGroup.invalid" >ENTRAR </ion-button>
+</form>
+</ion-content>
